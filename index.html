@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APE — Associação de Música | Aracaju, Sergipe</title>
+    <meta name="description" content="A APE é uma associação dedicada à educação musical e transformação social em Aracaju, Sergipe. Conheça nossos projetos e equipe.">
+    
+    <!-- Tipografia -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Cabeçalho -->
+    <header id="header">
+        <div class="container header-content">
+            <a href="#" class="logo">
+                <!-- Substituir pelo logotipo real da APE -->
+                <img src="assets/images/logo-ape.png" alt="Logotipo APE Associação de Música">
+            </a>
+            
+            <button class="mobile-menu-btn" aria-label="Abrir menu" aria-expanded="false">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#sobre">Sobre a APE</a></li>
+                    <li><a href="#educacao">Educação Musical</a></li>
+                    <li><a href="#galeria">Galeria</a></li>
+                    <li><a href="#equipe">Nossa Equipe</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="inicio" class="hero">
+            <style>
+                #inicio.hero {
+                    position: relative;
+                    min-height: 82vh;
+                    display: flex;
+                    align-items: center;
+                    padding: 140px 0 100px;
+                    background:
+                        radial-gradient(circle at 80% 30%, rgba(229, 169, 60, 0.16) 0%, transparent 52%),
+                        radial-gradient(circle at 15% 85%, rgba(122, 22, 22, 0.45) 0%, transparent 55%),
+                        linear-gradient(135deg, #280404 0%, #4B0D0D 50%, #360707 100%);
+                    color: #FFFFFF;
+                    overflow: hidden;
+                    border-bottom: 3px solid rgba(229, 169, 60, 0.45);
+                }
+
+                #inicio .hero-overlay {
+                    position: absolute;
+                    inset: 0;
+                    background-image:
+                        linear-gradient(rgba(229, 169, 60, 0.045) 1px, transparent 1px),
+                        linear-gradient(90deg, rgba(229, 169, 60, 0.045) 1px, transparent 1px);
+                    background-size: 48px 48px;
+                    mask-image: radial-gradient(ellipse at center, black 45%, transparent 85%);
+                    -webkit-mask-image: radial-gradient(ellipse at center, black 45%, transparent 85%);
+                    pointer-events: none;
+                }
+
+                #inicio .hero-content {
+                    position: relative;
+                    z-index: 2;
+                    max-width: 740px;
+                    margin: 0;
+                    text-align: left;
+                }
+
+                #inicio .hero-accent-line {
+                    display: block;
+                    width: 68px;
+                    height: 3px;
+                    background-color: #E5A93C;
+                    margin-bottom: 1.75rem;
+                }
+
+                #inicio h1 {
+                    font-family: 'Playfair Display', serif;
+                    font-size: clamp(2.4rem, 4.6vw, 3.85rem);
+                    font-weight: 700;
+                    line-height: 1.15;
+                    color: #FFFFFF;
+                    margin-bottom: 1.5rem;
+                    letter-spacing: -0.01em;
+                }
+
+                #inicio h1 span {
+                    color: #E5A93C;
+                }
+
+                #inicio .hero-content p {
+                    font-family: 'Inter', sans-serif;
+                    font-size: 1.15rem;
+                    font-weight: 300;
+                    line-height: 1.75;
+                    color: rgba(255, 248, 246, 0.88);
+                    margin-bottom: 2.5rem;
+                    max-width: 610px;
+                }
+
+                #inicio .hero-buttons {
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 1rem;
+                    justify-content: flex-start;
+                }
+
+                #inicio .btn {
+                    padding: 0.95rem 2rem;
+                    border-radius: 6px;
+                    font-family: 'Inter', sans-serif;
+                    font-weight: 600;
+                    font-size: 0.95rem;
+                    text-decoration: none;
+                    transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+
+                #inicio .btn-primary {
+                    background-color: #E5A93C;
+                    color: #2B0505;
+                    border: 1.5px solid #E5A93C;
+                }
+
+                #inicio .btn-primary:hover {
+                    background-color: #F0BC59;
+                    border-color: #F0BC59;
+                    transform: translateY(-2px);
+                }
+
+                #inicio .btn-secondary {
+                    background-color: transparent;
+                    color: #FFFFFF;
+                    border: 1.5px solid rgba(229, 169, 60, 0.7);
+                }
+
+                #inicio .btn-secondary:hover {
+                    background-color: rgba(229, 169, 60, 0.14);
+                    border-color: #E5A93C;
+                    color: #F5CA73;
+                    transform: translateY(-2px);
+                }
+
+                @media (max-width: 768px) {
+                    #inicio.hero {
+                        min-height: auto;
+                        padding: 120px 0 80px;
+                    }
+                }
+            </style>
+
+            <div class="hero-overlay"></div>
+            <div class="container">
+                <div class="hero-content">
+                    <span class="hero-accent-line" aria-hidden="true"></span>
+                    <h1>A música transforma vidas. A <span>educação musical</span> abre caminhos.</h1>
+                    <p>Promovemos o acesso à cultura e o desenvolvimento humano através do ensino musical em Aracaju, formando cidadãos e novos talentos.</p>
+                    <div class="hero-buttons">
+                        <a href="#sobre" class="btn btn-primary">Conhecer nossa história</a>
+                        <a href="#galeria" class="btn btn-secondary">Ver galeria</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sobre a APE -->
+        <section id="sobre" class="section">
+            <div class="container about-grid">
+                <div class="about-text">
+                    <h2 class="section-title">Sobre a Associação</h2>
+                    <p>A APE — Associação de Pastores e Evangélicos do bairro Santa Maria atua na cidade de Aracaju, Sergipe, com o compromisso de levar a educação musical a crianças e jovens. Acreditamos que a música é uma poderosa ferramenta de transformação social e cultural.</p>
+                    <p>Nossa missão é proporcionar um ambiente de aprendizado técnico e humano, onde o ensino dos instrumentos se une à construção da cidadania, disciplina e valorização da arte.</p>
+                    <p><em>[Espaço para texto editável sobre a fundação, objetivos específicos e histórico da instituição]</em></p>
+                </div>
+                <div class="about-image">
+                    <!-- Substituir por foto real da instituição -->
+                    <img src="assets/images/historia.jpeg" alt="Ensaio musical da APE">
+                </div>
+            </div>
+        </section>
+
+        <!-- Importância da Música -->
+        <section class="section bg-light">
+            <div class="container">
+                <h2 class="section-title text-center">Por que a Educação Musical?</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <h3>Desenvolvimento Cognitivo</h3>
+                        <p>O estudo da música estimula áreas do cérebro responsáveis pela memória, concentração e raciocínio lógico, potencializando o aprendizado geral.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Disciplina e Responsabilidade</h3>
+                        <p>A prática regular de um instrumento ensina a importância da rotina, do esforço contínuo e do comprometimento com resultados de longo prazo.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Trabalho em Equipe</h3>
+                        <p>Tocar em conjunto exige escuta, empatia e sincronia. Nossos alunos aprendem a conviver e respeitar o espaço e o tempo do outro.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Acesso e Oportunidades</h3>
+                        <p>A cultura amplia horizontes. Oferecemos ferramentas para que os jovens possam sonhar e, possivelmente, seguir trajetórias profissionais na arte.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Formação Musical -->
+        <section id="educacao" class="section">
+            <div class="container">
+                <h2 class="section-title">Nossas Atividades</h2>
+                <p class="section-subtitle">Oferecemos ensino prático e teórico, preparando nossos alunos para a vivência musical em grupo e apresentações públicas.</p>
+                
+                <div class="activities-grid">
+                    <div class="activity-item">
+                        <div class="activity-content">
+                            <h3>Clarinete</h3>
+                            <p>Aulas teóricas e práticas focadas na técnica do clarinete, abordando embocadura, digitação e repertório diversificado.</p>
+                        </div>
+                    </div>
+                    <div class="activity-item">
+                        <div class="activity-content">
+                            <h3>Flauta transversal</h3>
+                            <p>Iniciação e aperfeiçoamento em flauta transversal, desenvolvendo a respiração, afinação e a expressividade melódica.</p>
+                        </div>
+                    </div>
+                    <div class="activity-item">
+                        <div class="activity-content">
+                            <h3>Instrumentos de Metais</h3>
+                            <p>Formação em trompete, trombone e outros metais, construindo a base sonora forte e característica dos nossos grupos.</p>
+                        </div>
+                    </div>
+                    <div class="activity-item">
+                        <div class="activity-content">
+                            <h3>Prática Coletiva</h3>
+                            <p>Ensaios em grupo que culminam em apresentações públicas, onde os alunos vivenciam a dinâmica de uma orquestra ou banda.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projetos e Notícias (Referência Só Sergipe) -->
+        <section class="section bg-light">
+            <div class="container">
+                <h2 class="section-title">Notícias e Projetos</h2>
+                
+                <article class="news-card">
+                    <div class="news-image">
+                        <img src="assets/images/projeto-santa-maria.jpeg" alt="Projeto no Santa Maria" onerror="this.style.backgroundColor='#dcdcdc'">
+                    </div>
+                    <div class="news-content">
+                        <span class="news-tag">Destaque</span>
+                        <h3>Projeto no Santa Maria forma jovens músicos e prepara criação de nova orquestra</h3>
+                        <p>A iniciativa vem transformando a realidade de crianças e adolescentes no bairro Santa Maria, em Aracaju. Através do ensino gratuito de instrumentos de sopro e percussão, o projeto não apenas afasta os jovens de situações de vulnerabilidade, mas os prepara para integrar uma nova orquestra local, abrindo caminhos profissionais e sociais.</p>
+                        <a href="https://www.sosergipe.com.br/projeto-no-santa-maria-forma-jovens-musicos-e-prepara-criacao-de-nova-orquestra/" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Ler matéria completa</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Galeria de Fotos -->
+        <section id="galeria" class="section">
+            <div class="container">
+                <h2 class="section-title text-center">Nossos Momentos</h2>
+                <div class="photo-gallery" id="photo-gallery">
+                    <!-- Imagens adicionadas para a grade. O atributo data-caption será usado no JS -->
+                    <img src="assets/images/foto1.jpeg" alt="Apresentação musical 1" class="gallery-img" tabindex="0">
+                    <img src="assets/images/foto2.jpeg" alt="Ensaio de metais" class="gallery-img" tabindex="0">
+                    <img src="assets/images/foto3.jpeg" alt="Aula de flauta" class="gallery-img" tabindex="0">
+                    <img src="assets/images/foto4.jpeg" alt="Apresentação em público" class="gallery-img" tabindex="0">
+                    <img src="assets/images/foto5.jpeg" alt="Grupo de alunos" class="gallery-img" tabindex="0">
+                    <img src="assets/images/foto6.jpeg" alt="Detalhe instrumento" class="gallery-img" tabindex="0">
+                </div>
+            </div>
+        </section>
+
+        <!-- Galeria de Vídeos 
+        <section class="section bg-light">
+            <div class="container">
+                <h2 class="section-title">Galeria de Vídeos</h2>
+                <div class="video-grid">
+                    Exemplo de container de vídeo preparado para YouTube 
+                    <div class="video-container" data-video-id="ID_DO_VIDEO_AQUI">
+                        <div class="video-thumbnail">
+                            <img src="assets/images/galeria/capa-video1.jpg" alt="Capa do vídeo de apresentação" onerror="this.style.backgroundColor='#292929'">
+                            <button class="play-btn" aria-label="Reproduzir vídeo"></button>
+                        </div>
+                    </div>
+                    <div class="video-container" data-video-id="ID_DO_VIDEO_AQUI">
+                        <div class="video-thumbnail">
+                            <img src="assets/images/galeria/capa-video2.jpg" alt="Capa do vídeo de ensaio" onerror="this.style.backgroundColor='#292929'">
+                            <button class="play-btn" aria-label="Reproduzir vídeo"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+
+        <!-- Nossa Equipe -->
+        <section id="equipe" class="section">
+            <div class="container">
+                <h2 class="section-title text-center">Nossa Equipe</h2>
+                <div class="team-grid">
+                    <div class="team-member">
+                        <img src="assets/images/presidente.png" alt="Foto do Presidente" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'100%\' height=\'100%\'><rect width=\'100%\' height=\'100%\' fill=\'%23F5F4F1\'/></svg>'">
+                        <h4> Jônatas Araujo</h4>
+                        <span class="role">Presidente</span>
+                        <p>Bacharel em Direito, advogado e músico clarinetista, atua na liderança institucional e no fomento à cultura. Como presidente da APE, conduz a gestão estratégica e as parcerias para ampliar o acesso à educação musical em Aracaju.</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="assets/images/maestro.jpeg" alt="Foto do Maestro" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'100%\' height=\'100%\'><rect width=\'100%\' height=\'100%\' fill=\'%23F5F4F1\'/></svg>'">
+                        <h4>Ricardo Resende</h4>
+                        <span class="role">Maestro e Coordenador</span>
+                        <p>Licenciado em Música pela UFS e pós-graduado em Regência Orquestral e Gestão de Projetos Musicais. Músico da Orquestra Sinfônica de Sergipe (ORSSE) desde 2009 e professor na Orquestra Jovem de Sergipe, atua na APE como maestro, professor e coordenador de instrumentos de sopros.</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="assets/images/social-media.png" alt="Foto do Social Media" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'100%\' height=\'100%\'><rect width=\'100%\' height=\'100%\' fill=\'%23F5F4F1\'/></svg>'">
+                        <h4>Kaiely Victoria</h4>
+                        <span class="role">Social Media</span>
+                        <p>Filmmaker, fotógrafa e editora audiovisual, com atuação em produção de conteúdo digital. Na APE, cuida dos registros fotográficos e em vídeo das atividades e da gestão das redes sociais da associação.</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="assets/images/designer.png" alt="Foto do Designer" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'100%\' height=\'100%\'><rect width=\'100%\' height=\'100%\' fill=\'%23F5F4F1\'/></svg>'">
+                        <h4> Matheus Sousa</h4>
+                        <span class="role">Comunicação Visual</span>
+                        <p>Formado em Análise e Desenvolvimento de Sistemas, com atuação em design gráfico e capacitação em marketing digital. Na APE, é responsável pela comunicação visual, criação de materiais gráficos, identidade visual e desenvolvimento digital dos projetos.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Chamada Institucional CTA -->
+        <section class="cta-section">
+            <div class="container text-center">
+                <h2>Investir na educação musical é ampliar possibilidades para o futuro.</h2>
+                <p>Apoie nossa causa ou traga seu talento para somar à nossa associação.</p>
+                <a href="#contato" class="btn btn-primary">Fale Conosco</a>
+            </div>
+        </section>
+
+        <!-- Contato -->
+        <section id="contato" class="section">
+            <div class="container contact-grid">
+                <div class="contact-info">
+                    <h2 class="section-title">Entre em Contato</h2>
+                    <p>Estamos à disposição para parcerias, inscrições e dúvidas. Fale com a nossa equipe.</p>
+                    
+                    <ul class="contact-list">
+                        <li>
+                            <strong>Endereço:</strong><br>
+                            Rua Ayrton Senna, 64, Santa Maria<br>
+                            Aracaju - Sergipe
+                        </li>
+                        <li>
+                            <strong>Telefone / WhatsApp:</strong><br>
+                            (79) 98808-4342
+                        </li>
+                        <li>
+                            <strong>E-mail:</strong><br>
+                            ape.assoc@gmail.com
+                        </li>
+                        <li>
+                            <strong>Instagram:</strong><br>
+                            <a href="https://www.instagram.com/ape.assoc" target="_blank">@ape.assoc</a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="contact-form-container">
+                    <form id="contactForm" class="form">
+                        <div class="form-group">
+                            <label for="nome">Nome Completo</label>
+                            <input type="text" id="nome" name="nome" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">E-mail ou Telefone</label>
+                            <input type="text" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="assunto">Assunto</label>
+                            <input type="text" id="assunto" name="assunto" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="mensagem">Mensagem</label>
+                            <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Enviar Mensagem</button>
+                        <p id="formStatus" class="form-status"></p>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <img src="assets/images/logo-ape.png" alt="Logotipo APE Branco" class="footer-logo">
+                <p>Educação musical, cultura e transformação social em Aracaju, Sergipe.</p>
+            </div>
+            <div class="footer-links">
+                <h3>Navegação</h3>
+                <ul>
+                    <li><a href="#sobre">Sobre nós</a></li>
+                    <li><a href="#educacao">Projetos</a></li>
+                    <li><a href="#galeria">Galeria</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3>Contato</h3>
+                <p>Aracaju, SE - Brasil</p>
+                <p>ape.assoc@gmail.com</p>
+                <p>Instagram: @ape.assoc</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; <span id="currentYear"></span> APE — Associação de Pastores e Evangelicos do Bairro Santa Maria e Adjacencias. Todos os direitos reservados.</p>
+                <p>&copy; <span id="currentYear"></span> Desenvolvido por Matheus Sousa - Desenvolvedor & Web Designer.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal da Galeria (Lightbox) -->
+    <div id="lightbox" class="lightbox" aria-hidden="true">
+        <button class="lightbox-close" aria-label="Fechar galeria">&times;</button>
+        <button class="lightbox-prev" aria-label="Imagem anterior">&#10094;</button>
+        <div class="lightbox-content">
+            <img id="lightbox-img" src="" alt="">
+            <p id="lightbox-caption"></p>
+        </div>
+        <button class="lightbox-next" aria-label="Próxima imagem">&#10095;</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
